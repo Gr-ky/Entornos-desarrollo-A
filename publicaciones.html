@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicaciones</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js" defer></script>
+</head>
+<body data-page="publicaciones">
+
+    <header>
+        <h1>Mi Red Social</h1>
+
+        <nav>
+            <a href="publicaciones.html">Inicio</a>
+            <a href="perfil.html">Mi perfil</a>
+            <button id="cerrar-sesion">Cerrar sesión</button>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <h2>¿Qué está pasando?</h2>
+
+        <form id="form-publicacion">
+            <textarea id="contenido" placeholder="Escribe una publicación..." required></textarea>
+
+            <button type="submit">Publicar</button>
+        </form>
+
+        <p id="mensaje"></p>
+
+        <h2>Últimas publicaciones</h2>
+
+        <section id="lista-publicaciones">
+            <p>Cargando publicaciones...</p>
+        </section>
+    </main>
+
+</body>
+</html>
+
+
+estilos.css
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f4f8;
+    color: #333;
+}
+
+header {
+    background-color: #405de6;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #405de6;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #3048bd;
+}
+
+nav button {
+    background-color: #ffffff;
+    color: #405de6;
+}
+
+.contenedor {
+    background-color: white;
+    max-width: 650px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px #00000015;
+}
+
+.login {
+    margin-top: 100px;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.perfil-info {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.perfil-info img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: #ddd;
+}
+
+.publicacion {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+    background-color: #fafafa;
+}
+
+.publicacion h3 {
+    margin-top: 0;
+    color: #405de6;
+}
+
+#mensaje {
+    margin-top: 15px;
+    text-align: center;
+}
