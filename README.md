@@ -1,3 +1,3 @@
 # Entornos-desarrollo-A
 Proyecto EDD- HTML
-**file:///C:/Users/argan/Entornos-desarrollo-A/index.html**
+**https://github.com/Gr-ky/Entornos-desarrollo-A**
