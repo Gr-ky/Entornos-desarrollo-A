@@ -1,46 +1,29 @@
-# Registro de comandos - Proyecto JOKER
+# Calculadora Java + HTML
 
-Este archivo recoge los comandos utilizados durante la preparación y comprobación del repositorio.
-Se han ordenado según el proceso seguido en la conversación. Si se utilizaron otros comandos durante la actividad, deben añadirse en el lugar cronológico correspondiente antes de entregar.
+Suma, resta, multiplicación y potencias con enteros de hasta 5 dígitos.
 
-## 1. Consultar y actualizar las ramas del repositorio
+## Comandos utilizados (orden cronológico)
 
-```cmd
-git fetch origin
-git switch main
-git branch -a
-git ls-tree --name-only origin/backend
-git ls-tree --name-only origin/fronted
-git pull --ff-only origin main
-git diff --name-status main..origin/backend
-git diff --name-status main..origin/fronted
-```
+1. Crear el repositorio en GitHub (web): New repository, público, con README.
+2. `git clone https://github.com/Gr-ky/Entornos-desarrollo-A.git`: descarga el repo.
+3. `cd Entornos-desarrollo-A`: entra a la carpeta.
+4. `git checkout -b frontend`: crea la rama frontend y se pasa a ella.
+5. `git add index.html`: prepara el archivo HTML.
+6. `git status`: comprueba qué se va a commitear.
+7. `git commit -m "Agrego formulario HTML de la calculadora"`: guarda el cambio.
+8. `git push -u origin frontend`: publica la rama en GitHub.
+9. `git checkout main`: vuelve a main.
+10. `git checkout -b backend`: crea la rama backend desde main.
+11. `git add Calculadora.java`, `git status`, `git commit -m "Agrego logica Java de la calculadora"`, `git push -u origin backend`
+12. `git checkout main`
+13. `git merge --no-ff frontend -m "Merge de frontend en main"`
+14. `git merge --no-ff backend -m "Merge de backend en main"`
+15. `git push origin main`
+16. `git add README.md`, `git commit -m "Actualizo comentarios del README"`, `git push origin main`
 
-## 2. Comprobar los archivos versionados
+## Cómo ejecutar
 
-```cmd
-git status
-git pull origin main
-git ls-files
-dir
-```
+    javac Calculadora.java
+    java Calculadora
 
-## 3. Comprobar Java y ejecutar la aplicación
-
-```cmd
-java -version
-javac Calculadora.java
-java Calculadora
-```
-
-## 4. Comprobar la aplicación en el navegador
-
-Con el servidor Java iniciado, abrir esta dirección en Chrome:
-
-http://localhost:8080
-
-## Nota
-
-El enunciado pide documentar **todos** los comandos utilizados y que el registro sea cronológico. Este documento recoge los comandos que constan en el proceso descrito, pero no puede garantizar que incluya comandos ejecutados que no se hayan registrado aquí. Añade cualquier otro comando que recuerdes haber utilizado.
-
-La actividad también exige que el archivo se llame `READE.md`; por eso se conserva ese nombre, aunque normalmente se utiliza `README.md` para la documentación principal.
+Abrir http://localhost:8080
